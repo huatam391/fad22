@@ -5,6 +5,7 @@ en:
 
   layouts:
     header:
+      category: "Category"
       users: "Users"
       logout: "Log out"
       settings: "Settings"
@@ -29,18 +30,9 @@ en:
       signup: "Sign up!"
 
   users:
-    load_user:
-      not_found: "User not found"
-    create:
-      welcome: "Welcome to Fast Food"
-    new:
-      signup: "Sign up"
     user:
       you_sure?: "Are you sure?"
       delete: "Delete"
-    destroy:
-      user_deleted: "User deleted"
-      cant_delete: "Cant delete this user"
     index:
       all_users: "All users"
     logged_in_user:
@@ -59,6 +51,12 @@ en:
       address: "Address"
       phone: "Phone Number"
       password: "Password"
+    load_user:
+      not_found: "User not found"
+    create:
+      welcome: "Welcome to Fast Food"
+    new:
+      signup: "Sign up"
 
   shared:
     error_messages:
@@ -79,3 +77,35 @@ en:
       invalid: "Invalid email/password combination"
     load_user:
       not_found: "User not found"
+
+  categories:
+    index:
+      all_categories: "All categories"
+      add_category: "Add category"
+    category:
+      delete: "Delete"
+      edit: "Edit"
+      are_you_sure?: "Are you sure?"
+    load_category:
+      category_not_found: "Category not found"
+  admin:
+    categories:
+      create:
+        category_created: "Category created!"
+      destroy:
+        category_deleted: "Category deleted!"
+        cant_delete: "Cant delete this category"
+      update:
+        category_updated: "Category updated!"
+      edit:
+        edit_category: "Edit category"
+        save_change: "Save change"
+      new:
+        category: "Category"
+        create_category: "Create category"
+      load_category:
+        category_not_found: "Category not found"
+    users:
+      destroy:
+        user_deleted: "User deleted"
+        cant_delete: "Cant delete this user"

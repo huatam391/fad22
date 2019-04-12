@@ -8,3 +8,10 @@ User.create!(name: "Example User", email: "example@railstutorial.org",
   User.create!(name: name, email: email, password: password,
     password_confirmation: password)
 end
+
+Category.create!(name: "Hamberger" )
+Category.create!(name: "Sanwich")
+Category.create!(name: "Banh My")
+Category.create!(name: "Ga KFC")
+Category.create!(name: "Cafe")
+Category.create!(name: "Thuc uong co ga")

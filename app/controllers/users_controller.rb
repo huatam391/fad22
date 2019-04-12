@@ -2,8 +2,7 @@ class UsersController < ApplicationController
   before_action :load_user, except: %i(new index create)
   before_action :correct_user, only: %i(edit update)
   before_action :logged_in_user, only: %i(index edit update)
-  before_action :admin_user, only: :destroy
-  include UsersHelper
+
   def new
     @user = User.new
   end
@@ -33,17 +32,8 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.paginate page: params[:page],
+    @users = User.desc_by_create_at.paginate page: params[:page],
       per_page: Settings.per_page.users_index
-  end
-
-  def destroy
-    if @user.destroy
-      flash[:sucess] = t ".user_deleted"
-    else
-      flash[:danger] = t "cant_delete"
-    end
-    redirect_to users_path
   end
 
   private
