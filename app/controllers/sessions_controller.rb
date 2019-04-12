@@ -6,6 +6,11 @@ class SessionsController < ApplicationController
   def create
     if @user && @user.authenticate(params[:session][:password])
       log_in @user
+      if params[:session][:remember_me] == Settings.one
+        remember @user
+      else
+        forget @user
+      end
       redirect_to @user
     else
       flash.now[:danger] = t ".invalid"
@@ -14,7 +19,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
+    log_out if logged_in?
     redirect_to root_path
   end
 
@@ -22,5 +27,8 @@ class SessionsController < ApplicationController
 
   def load_user
     @user = User.find_by email: params[:session][:email].downcase
+    return if @user
+    flash[:danger] = t "sessions.load_user.not_found"
+    redirect_to root_path
   end
 end
