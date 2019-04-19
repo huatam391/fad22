@@ -1,4 +1,4 @@
-ActiveRecord::Schema.define(version: 20190412032342) do
+ActiveRecord::Schema.define(version: 20190416062428) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20190412032342) do
     t.integer "role", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end

@@ -15,3 +15,23 @@ en:
       fastfood: "Welcome to Fast Food Shop"
       home: "Home"
       signup: "Sign up!"
+  users:
+    load_user:
+      not_found: "User not found"
+    create:
+      welcome: "Welcome to Fast Food"
+    new:
+      signup: "Sign up"
+      confirmation: "Confirmation"
+      create: "Create my account"
+      name: "Name"
+      email: "Email"
+      address: "Address"
+      phone: "Phone Number"
+      password: "Password"
+  shared:
+    error_messages:
+      text: "The form contains "
+      error:
+        one: "1 error"
+        other: "%{count} errors"
