@@ -1,4 +1,8 @@
 en:
+  application:
+    full_title:
+      fastfood: "Fast Food Shop"
+
   layouts:
     header:
       users: "Users"
@@ -47,9 +51,14 @@ en:
         other: "%{count} errors"
 
   sessions:
-    create:
-      invalid: "Invalid email/password combination"
     new:
+      email: "Email"
+      password: "Password"
+      remember_me: "Remember me on this computer"
       login: "Log in"
       signup: "Sign up now!"
       new_user?: "New user?"
+    create:
+      invalid: "Invalid email/password combination"
+    load_user:
+      not_found: "User not found"
