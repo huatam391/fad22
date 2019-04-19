@@ -1,6 +1,11 @@
 en:
   layouts:
     header:
+      users: "Users"
+      logout: "Log out"
+      settings: "Settings"
+      profile: "Profile"
+      account: "Account"
       fastfood: "Fast Food"
       home: "Home"
       help: "Help"
@@ -10,11 +15,15 @@ en:
       contact: "Contact"
       new: "New"
       copyright_html: "Copy right <span>&copy;</span> Sun* Inc, Da Nang"
+    application:
+      fastfood: "Food And Drink"
+
   static_pages:
     home:
       fastfood: "Welcome to Fast Food Shop"
       home: "Home"
       signup: "Sign up!"
+
   users:
     load_user:
       not_found: "User not found"
@@ -29,9 +38,18 @@ en:
       address: "Address"
       phone: "Phone Number"
       password: "Password"
+
   shared:
     error_messages:
       text: "The form contains "
       error:
         one: "1 error"
         other: "%{count} errors"
+
+  sessions:
+    create:
+      invalid: "Invalid email/password combination"
+    new:
+      login: "Log in"
+      signup: "Sign up now!"
+      new_user?: "New user?"
