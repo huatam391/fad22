@@ -1,3 +1,5 @@
+per_page:
+  users_index: 20
 one: "1"
 users:
   name:
@@ -8,3 +10,4 @@ users:
     minimum: 6
 gravatar:
   size: 80
+  index_size: 50

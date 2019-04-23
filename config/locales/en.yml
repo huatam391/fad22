@@ -35,6 +35,23 @@ en:
       welcome: "Welcome to Fast Food"
     new:
       signup: "Sign up"
+    user:
+      you_sure?: "Are you sure?"
+      delete: "Delete"
+    destroy:
+      user_deleted: "User deleted"
+      cant_delete: "Cant delete this user"
+    index:
+      all_users: "All users"
+    logged_in_user:
+      please_login: "Please log in"
+    update:
+      profile_updated: "Profile updated!"
+    edit:
+      edit_user: "Edit User"
+      save_change: "Save change"
+      update_profile: "Update your profile"
+    form:
       confirmation: "Confirmation"
       create: "Create my account"
       name: "Name"
