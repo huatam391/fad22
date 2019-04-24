@@ -1,0 +1,12 @@
+<% provide :title, t(".all_categories") %>
+<h1><%= t(".all_categories") %></h1>
+<%= will_paginate %>
+<ul class="list-group">
+  <%= render @categories %>
+</ul>
+<%= will_paginate %>
+<% if logged_in? && current_user.admin? %>
+  <%= button_to t(".add_category"),
+    new_admin_category_path, class: "btn btn-primary btnwidth",
+      method: "get" %>
+<% end %>
