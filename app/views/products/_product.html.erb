@@ -1,0 +1,32 @@
+<div class="col-md-4">
+  <div class="card h-100">
+    <%= link_to image_tag(product.image_link.url, size: "300x200" ,class: "card-img-top"),
+      product %>
+    <div class="card-body">
+      <h4 class="card-title">
+        <%= link_to product.name.
+          truncate(Settings.truncate.name, separator: " "), product %>
+      </h4>
+      <h5>
+        <span class="badge badge-success">
+          <%= number_to_currency product.price %>
+        </span>
+      </h5>
+      <p class="card-text">
+        <%= product.description.
+          truncate(Settings.truncate.description, separator: " ") %>
+      </p>
+    </div>
+    <% if logged_in? && current_user.admin? %>
+      <div class="row" style = "margin-bottom: 15px">
+        <div class="col-md-4">
+          <%= link_to t("edit"), "#", class: "btn btn-success btn-sm" %>
+        </div>
+        <div class="col-md-4">
+          <%= link_to t("delete"), "#", method: :delete,
+            data: {confirm: t("you_sure")}, class: "btn btn-danger btn-sm" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

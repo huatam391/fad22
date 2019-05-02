@@ -6,8 +6,8 @@ class CategoriesController < ApplicationController
 
   def index
     @categories =
-      Category.desc_by_create_at.paginate page: params[:page],
-      per_page: Settings.per_page.users_index
+      Category.desc_by_name.paginate page: params[:page],
+        per_page: Settings.per_page.users_index
   end
 
   private

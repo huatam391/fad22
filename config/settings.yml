@@ -1,5 +1,6 @@
 per_page:
   users_index: 20
+  product_index: 18
 one: "1"
 users:
   name:
@@ -11,3 +12,7 @@ users:
 gravatar:
   size: 80
   index_size: 50
+
+truncate:
+  name: 30
+  description: 70

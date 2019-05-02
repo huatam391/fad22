@@ -109,3 +109,10 @@ en:
       destroy:
         user_deleted: "User deleted"
         cant_delete: "Cant delete this user"
+
+  products:
+    index:
+      heading: "Menu"
+      add: "Add Product"
+    load_product:
+      product_not_found: "Product not found"
