@@ -3,6 +3,8 @@ class OrderDetailsController < ApplicationController
   before_action :load_order_detail, only: %i(update destroy)
   before_action :load_order_detail_by_product_id, only: :create
   before_action :check_params_quantity, only: %i(create update)
+  before_action :authenticate_user!, only: :create
+  authorize_resource
 
   def create
     if @order_detail.nil?

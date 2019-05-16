@@ -2,7 +2,8 @@ en:
   application:
     full_title:
       fastfood: "Fast Food Shop"
-
+    authenticate_user!:
+      please_login: "Please log in first"
   layouts:
     header:
       category: "Category"
@@ -152,7 +153,9 @@ en:
   comments:
     create:
       please_log_in: "Please log in"
-
+    comment:
+      edit: "Edit"
+      delete: "Delete"
   order_details:
     create:
       please_log_in: "Please log in"

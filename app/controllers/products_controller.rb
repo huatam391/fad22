@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :load_product, only: :show
+  authorize_resource
 
   def index
     @products = if filtering_params.blank?
@@ -15,7 +16,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @order_detail = @order_detail = current_order.order_details.new
+    @order_detail = OrderDetail.new
     @comment = Comment.new
     @comments = @product.comments.order(created_at: :DESC)
                         .paginate page: params[:page], per_page: 10
